@@ -3,6 +3,7 @@ require "dependabot/file_parsers/ruby/bundler"
 require "dependabot/file_parsers/python/pip"
 require "dependabot/file_parsers/java_script/yarn"
 require "dependabot/file_parsers/php/composer"
+require "dependabot/file_parsers/elixir/hex"
 
 module Dependabot
   module FileParsers
@@ -12,6 +13,7 @@ module Dependabot
       when "yarn" then FileParsers::JavaScript::Yarn
       when "pip" then FileParsers::Python::Pip
       when "composer" then FileParsers::Php::Composer
+      when "hex" then FileParsers::Elixir::Hex
       else raise "Unsupported package_manager #{package_manager}"
       end
     end
