@@ -14,7 +14,8 @@ the helpers:
 
 1. `bundle install`
 2. `cd helpers/javascript && yarn install && cd -`
-2. `cd helpers/php && composer install && cd -`
+3. `cd helpers/php && composer install && cd -`
+4. `cd helpers/elixir && mix deps.get && cd -`
 
 ## Internals
 

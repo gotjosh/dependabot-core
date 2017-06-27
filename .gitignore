@@ -5,3 +5,5 @@
 Gemfile.lock
 /helpers/javascript/node_modules
 vendor
+/helpers/elixir/deps
+/helpers/elixir/_build

@@ -13,7 +13,7 @@ module Dependabot
             Dependency.new(
               name: dep["name"],
               version: dep["version"],
-              language: "elixir"
+              package_manager: "hex",
             )
           end
         end
@@ -26,11 +26,31 @@ module Dependabot
             File.write(File.join(dir, "mix.lock"), lockfile.content)
 
             SharedHelpers.run_helper_subprocess(
-              command: "elixir #{elixir_helper_path}",
+              env: {
+                "MIX_EXS" => elixir_helper_mix_exs_path,
+                "MIX_LOCK" => elixir_helper_mix_lock_path,
+                "MIX_DEPS" => elixir_helper_mix_deps_path
+              },
+              command: "mix run #{elixir_helper_path}",
               function: "parse",
               args: [dir]
             )
           end
+        end
+
+        def elixir_helper_mix_exs_path
+          project_root = File.join(File.dirname(__FILE__), "../../../..")
+          File.join(project_root, "helpers/elixir/mix.exs")
+        end
+
+        def elixir_helper_mix_deps_path
+          project_root = File.join(File.dirname(__FILE__), "../../../..")
+          File.join(project_root, "helpers/elixir/deps")
+        end
+
+        def elixir_helper_mix_lock_path
+          project_root = File.join(File.dirname(__FILE__), "../../../..")
+          File.join(project_root, "helpers/elixir/mix.lock")
         end
 
         def elixir_helper_path
