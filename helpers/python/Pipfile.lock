@@ -1,0 +1,23 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "82062c5dff23a1a4c4d854a8199388743224393612b8ac50a61f239ed7a75ba5"
+        },
+        "requires": {},
+        "sources": [
+            {
+                "url": "https://pypi.python.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "pipfile": {
+            "version": "==0.0.2"
+        },
+        "toml": {
+            "version": "==0.9.2"
+        }
+    },
+    "develop": {}
+}
