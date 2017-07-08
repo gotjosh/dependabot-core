@@ -22,7 +22,7 @@
             "version": "==2.5"
         },
         "requests": {
-            "version": "==2.18.1"
+            "version": "==2.18.0"
         },
         "urllib3": {
             "version": "==1.21.1"

@@ -1,6 +1,4 @@
-# TODO: Python code goes here, not just hard coded output.
-#       We need to parse the Pipfile and Pipfile.lock to get a list of
-#       dependencies and their versions.
+# Parse the Pipfile and Pipfile.lock to get a list of dependency versions.
 import json
 
 from pipfile.api import PipfileParser

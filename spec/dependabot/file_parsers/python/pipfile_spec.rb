@@ -35,7 +35,7 @@ RSpec.describe Dependabot::FileParsers::Python::Pipfile do
 
         it { is_expected.to be_a(Dependabot::Dependency) }
         its(:name) { is_expected.to eq("requests") }
-        its(:version) { is_expected.to eq("2.18.1") }
+        its(:version) { is_expected.to eq("2.18.0") }
       end
     end
   end
