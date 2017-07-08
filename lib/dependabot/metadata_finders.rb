@@ -11,6 +11,7 @@ module Dependabot
       when "bundler" then MetadataFinders::Ruby::Bundler
       when "yarn" then MetadataFinders::JavaScript::Yarn
       when "pip" then MetadataFinders::Python::Pip
+      when "pipfile" then MetadataFinders::Python::Pip
       when "composer" then MetadataFinders::Php::Composer
       else raise "Unsupported package_manager #{package_manager}"
       end
