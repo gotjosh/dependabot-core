@@ -11,6 +11,7 @@ module Dependabot
       when "bundler" then UpdateCheckers::Ruby::Bundler
       when "yarn" then UpdateCheckers::JavaScript::Yarn
       when "pip" then UpdateCheckers::Python::Pip
+      when "pipfile" then UpdateCheckers::Python::Pip
       when "composer" then UpdateCheckers::Php::Composer
       else raise "Unsupported package_manager #{package_manager}"
       end
